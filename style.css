@@ -4,7 +4,7 @@ body {
 
 .container {
     border-radius: 8px;
-    width: 300px;
+    min-width: 300px;
     margin: auto;
 }
 
@@ -19,9 +19,10 @@ body {
 
 .flex-container {
     display: flex;
-    justify-content:space-evenly;
-    
+    justify-content: space-evenly;
+
 }
+
 .input__container {
     display: flex;
 }
@@ -32,7 +33,7 @@ body {
 
 h1 {
     color: black;
-    
+
 }
 
 form {
@@ -45,9 +46,10 @@ form {
     background: #626060d8;
     list-style: none;
     padding: 0;
+    width: 100%;
 }
 
-ul .green {
+ul .done {
     text-decoration: line-through;
 }
 

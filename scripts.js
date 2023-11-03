@@ -10,16 +10,17 @@ let sortType = true
 let sortHover = true
 
 
-function addList() {
+function addList(e) {
     let li = document.createElement("li");
 
     if (inputUser.value === '') {
-        alert('you must write something!')
+        // alert('you must write something!')
     }
     else {
-        li.innerHTML = inputUser.value;
+        li.innerHTML = inputUser.value.trim();
         list.appendChild(li);
         inputUser.value = '';
+        e.preventDefault()
     }
     li.addEventListener('mouseover', () => {
         if (ben) {
@@ -41,33 +42,29 @@ function addList() {
             li.style.transition = '0.5s'
         }
     })
+
     li.addEventListener("click", remove)
-
 }
-
 
 img.addEventListener('mouseover', () => {
     if (sortType) {
         img.src = 'images/acdown.svg'
         img.style.transition = '0.5s'
-
     }
     else {
         img.src = 'images/acup.svg'
         img.style.transition = '0.5s'
-
     }
 })
+
 img.addEventListener('mouseout', () => {
     if (sortType) {
         img.src = 'images/pasdown.svg'
         img.style.transition = '0.5s'
-
     }
     else {
         img.src = 'images/pasup.svg'
         img.style.transition = '0.5s'
-
     }
 })
 
@@ -116,31 +113,25 @@ function sortList() {
 
 function remove(e) {
     if (ben) {
-        e.target.classList.toggle("green")
-
+        e.target.classList.toggle("done")
     }
     else {
         e.target.remove();
     }
-
 }
 
 bin.addEventListener('mouseover', () => {
     if (ben) {
         bin.src = '/images/bin acc.png'
-
-
     }
     else {
         bin.src = '/images/bin.png'
-
     }
 })
+
 bin.addEventListener('mouseout', () => {
     if (ben) {
         bin.src = '/images/bin.png'
-
-
     }
     else {
         bin.src = 'images/bin acc.png'
