@@ -71,18 +71,18 @@ img.addEventListener('mouseout', () => {
 function sortList() {
     if (sortHover) {
         if (!sortType) {
-            img.src = '/images/acdown.svg'
+            img.src = 'images/acdown.svg'
         }
         else {
-            img.src = '/images/acup.svg'
+            img.src = 'images/acup.svg'
         }
     }
     else {
         if (sortType) {
-            img.src = '/images/pasdown.svg'
+            img.src = 'images/pasdown.svg'
         }
         else {
-            img.src = '/images/pasup.svg'
+            img.src = 'images/pasup.svg'
         }
     }
 
@@ -122,16 +122,16 @@ function remove(e) {
 
 bin.addEventListener('mouseover', () => {
     if (ben) {
-        bin.src = '/images/bin acc.png'
+        bin.src = 'images/bin acc.png'
     }
     else {
-        bin.src = '/images/bin.png'
+        bin.src = 'images/bin.png'
     }
 })
 
 bin.addEventListener('mouseout', () => {
     if (ben) {
-        bin.src = '/images/bin.png'
+        bin.src = 'images/bin.png'
     }
     else {
         bin.src = 'images/bin acc.png'
@@ -140,7 +140,7 @@ bin.addEventListener('mouseout', () => {
 
 bin.addEventListener("click", () => {
     if (ben) {
-        bin.src = '/images/bin acc.png'
+        bin.src = 'images/bin acc.png'
     }
     else {
         bin.src = 'images/bin.png'
@@ -149,11 +149,11 @@ bin.addEventListener("click", () => {
 });
 
 clearClose.addEventListener('mouseover', () => {
-    clearClose.src = '/images/acclose.png'
+    clearClose.src = 'images/acclose.png'
 })
 
 clearClose.addEventListener('mouseout', () => {
-    clearClose.src = '/images/pasclose.png'
+    clearClose.src = 'images/pasclose.png'
 })
 
 clearClose.addEventListener('click', () => {
